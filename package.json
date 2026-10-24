@@ -1,0 +1,12 @@
+{
+  "name": "estoque",
+  "version": "1.0.0",
+  "description": "Sistema de controle de estoque - Projeto Integrador Gran Faculdade",
+  "license": "ISC",
+  "author": "Rubens Melo",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
