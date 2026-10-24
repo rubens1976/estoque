@@ -1,14 +1,14 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {
-    'Content-Type': 'text/plain; charset=utf-8'
-  });
-  res.end('Olá, Mundo!');
-});
-
+const app = express();
 const PORT = 3000;
 
-server.listen(PORT, () => {
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Olá, Mundo!');
+});
+
+app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}/`);
 });
