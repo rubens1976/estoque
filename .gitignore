@@ -1,3 +1,7 @@
 node_modules/
 .env
 *.log
+estoque.db
+estoque.db-journal
+estoque.db-wal
+estoque.db-shm
