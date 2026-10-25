@@ -35,8 +35,8 @@ test('vínculos entre produtos e fornecedores usam somente banco em memória', a
     db.all(sql, [], (erro, linhas) => erro ? reject(erro) : resolve(linhas));
   });
   assert.deepEqual(await consultar('PRAGMA foreign_keys'), [{ foreign_keys: 1 }]);
-  const criacao = fs.readFileSync(path.join(raiz, 'criar-tabelas.js'), 'utf8');
-  await executar(criacao.match(/db\.exec\(`([\s\S]*?)`/)[1].replace('PRAGMA foreign_keys = ON;', ''));
+  const criacao = require('../utils/esquema-base');
+  await executar(criacao.replace('PRAGMA foreign_keys = ON;', ''));
   await executar(`
     INSERT INTO produtos (nome, codigo_barras, preco, quantidade)
     VALUES ('Teclado', '001', 50, 10), ('Mouse', '002', 25, 20);

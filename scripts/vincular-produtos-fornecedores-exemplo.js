@@ -105,7 +105,9 @@ async function principal() {
   }
 }
 
-principal().catch(erro => {
+if (require.main === module) principal().catch(erro => {
   console.error(`Carga de vínculos cancelada: ${erro.message}`);
   process.exitCode = 1;
 });
+
+module.exports = { vinculos };

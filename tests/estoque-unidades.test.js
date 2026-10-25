@@ -11,7 +11,7 @@ const registrarProdutos = require('../controllers/produtos');
 test('estoque por unidade usa banco em memória e conserva os saldos', async t => {
   const db = new sqlite3.Database(':memory:');
   const exec = sql => new Promise((resolve, reject) => db.exec(sql, erro => erro ? reject(erro) : resolve()));
-  const esquema = fs.readFileSync(path.join(__dirname, '../criar-tabelas.js'), 'utf8').match(/db\.exec\(`([\s\S]*?)`/)[1];
+  const esquema = require('../utils/esquema-base');
   await exec(esquema);
   await executar(db, "INSERT INTO produtos (nome, codigo_barras, preco, quantidade) VALUES ('Produto antigo', 'ANTIGO', 10, 23)");
   await inicializarEstoque(db);

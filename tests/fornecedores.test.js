@@ -33,8 +33,8 @@ test('rotas de fornecedores usam somente SQLite em memória', async (t) => {
     db.all(sql, [], (erro, linhas) => erro ? reject(erro) : resolve(linhas));
   });
   const raiz = path.join(__dirname, '..');
-  const criacao = fs.readFileSync(path.join(raiz, 'criar-tabelas.js'), 'utf8');
-  await executar(criacao.match(/db\.exec\(`([\s\S]*?)`/)[1]);
+  const criacao = require('../utils/esquema-base');
+  await executar(criacao);
 
   // Carrega as rotas reais, substituindo apenas conexão e porta do servidor.
   // database.js nunca é carregado: estoque.db não é aberto por estes testes.

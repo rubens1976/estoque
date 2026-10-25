@@ -23,6 +23,10 @@ saídas e transferências com histórico. Veja [estoque por unidade](docs/estoqu
 
 ## Como executar
 
+Para iniciar também a interface React, siga o
+[guia completo do frontend](frontend/README.md), com os dois terminais,
+preparação dos dados de exemplo, telas disponíveis e solução de problemas.
+
 Instale o Node.js, abra um terminal na pasta do projeto e execute:
 
 ```bat
@@ -314,12 +318,68 @@ O vínculo pode ser criado novamente usando a rota POST.
 
 ## Testes
 
+O [ensaio de instalação em uma cópia separada](docs/ensaio-instalacao.md)
+concluiu a instalação pelos lockfiles, a preparação de um banco novo, os
+61 testes e a compilação do frontend. As quatro telas carregaram os dados
+da API isolada. O relatório descreve o ambiente, os ajustes de portas e os
+limites da conferência.
+
+Os [resultados da sessão de testes no Insomnia de 25/10/2026](docs/resultados-testes-insomnia.md)
+registram as respostas observadas, as correções, as confirmações diretas na
+API e a conferência final do estoque. A regressão automatizada passou com
+61 testes.
+
+A coleção atualizada do Insomnia está em `conectabyte-insomnia`. Siga o
+[roteiro numerado de demonstração](docs/roteiro-insomnia.md): os IDs dos
+registros criados são capturados automaticamente, e o teste não modifica
+os cadastros da carga inicial. Inclui CRUD, associações e estoque por unidade.
+
 Execute `npm.cmd test` no PowerShell ou `npm test` no Prompt de Comando.
 Os testes usam exclusivamente SQLite em memória e uma porta HTTP temporária;
 não abrem nem alteram `estoque.db`.
 
+## Preparação completa dos dados de demonstração
+
+Em uma instalação nova, após `npm install`, execute na raiz:
+
+```powershell
+npm.cmd run preparar:exemplo
+node app.js
+```
+
+O primeiro comando cria `estoque.db` com o esquema completo, 20 produtos
+(19 do CSV e o Teclado USB), 14 fornecedores fictícios com todos os campos,
+40 vínculos, nove unidades e 532 peças distribuídas em 180 saldos. Também
+registra as alocações iniciais no histórico de estoque. Os códigos `DEMO-CB`
+são identificadores de demonstração; preços e vínculos são exemplos acadêmicos.
+
+Essa preparação substitui a execução em sequência dos scripts avulsos para
+montar uma demonstração do zero. O catálogo é inserido antes da distribuição,
+evitando concentrar todo o saldo na sede. Os IDs são gerados no banco novo;
+os vínculos são resolvidos por nome do produto e CNPJ, sem depender dos IDs
+do banco usado durante o desenvolvimento.
+
+Se o arquivo de destino já existir, o comando encerra com erro e o preserva.
+Não apague seu banco de trabalho para executar a demonstração. Para gerar uma
+cópia separada, use um caminho ainda inexistente:
+
+```powershell
+npm.cmd run preparar:exemplo -- --banco exemplos/estoque.db
+```
+
+O banco separado não é usado automaticamente pelo servidor. Para avaliá-lo,
+copie-o como `estoque.db` na raiz de **outra cópia do projeto**, antes de iniciar
+`node app.js`. Não execute `criar-tabelas.js` antes de `preparar:exemplo`: o
+comando completo já cria todas as tabelas. A carga trabalha em arquivo
+temporário, verifica a integridade e publica apenas após fechar o SQLite.
+
+O rateio conserva cada quantidade; empates usam os IDs do banco novo, portanto
+alguns saldos por cidade podem diferir do banco antigo de desenvolvimento.
+Os testes conferem a reprodução do rateio, a integridade, a soma dos saldos e
+a proteção contra sobrescrita. O arquivo `exemplos/estoque.db` é ignorado pelo
+Git pela regra atual; sua inclusão será decidida na entrega final.
+
 ## Pendência para a entrega final
 
-- [ ] Preparar um banco SQLite de exemplo, separado de `estoque.db`, com dados
-  fictícios de produtos, fornecedores e vínculos. Conferir que não contenha
-  dados pessoais e decidir se será incluído no GitHub para facilitar a avaliação.
+- [x] Preparar banco SQLite separado com dados fictícios: `exemplos/estoque.db`.
+- [ ] Decidir se o banco de exemplo será incluído no GitHub para a avaliação.

@@ -1,5 +1,5 @@
 // Dados fictícios para demonstração. Execute após criar as tabelas.
-const db = require('../database');
+const db = require.main === module ? require('../database') : null;
 const { validarFornecedor } = require('../utils/fornecedor');
 
 const fornecedores = [
@@ -164,4 +164,6 @@ async function popular() {
   }
 }
 
-popular();
+if (require.main === module) popular();
+
+module.exports = { fornecedores };
