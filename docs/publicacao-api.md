@@ -4,9 +4,24 @@ Autor: Rubens Melo. Projeto ConectaByte Informática — Gran Faculdade.
 
 ## Situação
 
-Preparação local para Render concluída. Ainda não há URL pública verificada.
-É necessário entrar na conta de hospedagem e concluir a criação do serviço.
-Endereços `localhost` e `127.0.0.1` não permitem avaliação externa.
+API publicada em **https://conectabyte-api.onrender.com** no plano Free.
+O Render confirmou `Deploy succeeded | Live` para o commit `8359f83` em
+25/10/2026. As três consultas HTTPS retornaram HTTP 200 e listas JSON válidas:
+20 produtos, 14 fornecedores e 9 unidades. Os detalhes de horário, duração e
+amostra das respostas estão em [evidencias-api-publica.json](evidencias-api-publica.json).
+O [PDF de entrega](entrega-api-conectabyte.pdf) tem uma página e está abaixo
+do limite de 5 MB da plataforma.
+
+Endereços públicos verificados:
+
+- https://conectabyte-api.onrender.com/produtos
+- https://conectabyte-api.onrender.com/fornecedores
+- https://conectabyte-api.onrender.com/unidades
+
+Não são necessários login ou token para essas consultas. A validação externa
+foi feita por HTTP automatizado; não se afirma execução manual desses três
+endereços no aplicativo Insomnia. Endereços `localhost` e `127.0.0.1` não
+permitem avaliação externa.
 
 O teste de inicialização executa a API em um processo separado, com porta e
 banco temporários, confere as três listas e verifica a preservação de uma
@@ -62,6 +77,11 @@ repositório, explicação da demonstração e os três endereços completos. O 
 da Gran aceita PDF de até 5 MB. Não entregar URLs fictícias ou somente locais.
 
 ## Limites da demonstração gratuita
+
+A primeira tentativa de publicação falhou por incompatibilidade de GLIBC do
+binário pré-compilado do SQLite. Compilar a dependência no próprio Render
+resolveu o problema na segunda publicação. Não foi necessário alterar o
+catálogo nem migrar os dados para outro banco.
 
 O Render informa que o serviço gratuito suspende após 15 minutos sem tráfego;
 a primeira consulta após a suspensão pode levar cerca de um minuto.

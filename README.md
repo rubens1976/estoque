@@ -25,8 +25,12 @@ saídas e transferências com histórico. Veja [estoque por unidade](docs/estoqu
 
 Para disponibilizar a API ao professor pela internet, consulte o
 [roteiro de publicação no Render](docs/publicacao-api.md). A configuração
-`render.yaml` usa o plano gratuito e dados de demonstração. A publicação e os
-testes externos ainda precisam ser concluídos na conta de hospedagem.
+`render.yaml` usa o plano gratuito e dados de demonstração.
+A API foi publicada em **https://conectabyte-api.onrender.com** e as três
+consultas de entrega retornaram HTTP 200 em 25/10/2026. O
+[PDF para avaliação](docs/entrega-api-conectabyte.pdf) contém os endereços e
+resultados. O primeiro acesso após inatividade pode demorar; os dados são
+temporários, conforme explicado no roteiro.
 
 Para iniciar também a interface React, siga o
 [guia completo do frontend](frontend/README.md), com os dois terminais,

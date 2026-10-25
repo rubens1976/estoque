@@ -1,0 +1,62 @@
+{
+  "base_url": "https://conectabyte-api.onrender.com",
+  "verificado_em": "25/10/2026, 19:26:17 BRT",
+  "consultas": [
+    {
+      "titulo": "Listar produtos",
+      "metodo": "GET",
+      "url": "https://conectabyte-api.onrender.com/produtos",
+      "status": 200,
+      "itens": 20,
+      "duracao_ms": 1097,
+      "descricao": "Lista os produtos cadastrados, incluindo nome, preço e quantidade.",
+      "amostra": {
+        "id": 1,
+        "nome": "Teclado USB",
+        "descricao": "Teclado USB com fio para computador, layout ABNT2.",
+        "codigo_barras": "DEMO-CB-TECLADO-USB",
+        "preco": 89.9,
+        "quantidade": 10
+      }
+    },
+    {
+      "titulo": "Listar fornecedores",
+      "metodo": "GET",
+      "url": "https://conectabyte-api.onrender.com/fornecedores",
+      "status": 200,
+      "itens": 14,
+      "duracao_ms": 272,
+      "descricao": "Lista os fornecedores cadastrados com os dados do cadastro.",
+      "amostra": {
+        "id": 1,
+        "nome": "Nexus Distribuição de Informática",
+        "cnpj": "99001001000118",
+        "telefone": "(11) 3000-1001",
+        "email": "contato.nexus@example.com",
+        "endereco": "Rua do Circuito, 120 - Centro, São Paulo/SP"
+      }
+    },
+    {
+      "titulo": "Listar unidades",
+      "metodo": "GET",
+      "url": "https://conectabyte-api.onrender.com/unidades",
+      "status": 200,
+      "itens": 9,
+      "duracao_ms": 282,
+      "descricao": "Lista a sede e as filiais do cenário acadêmico, com seus indicadores.",
+      "amostra": {
+        "id": 1,
+        "cidade": "Fortaleza",
+        "uf": "CE",
+        "tipo": "Sede",
+        "shopping": "Iguatemi Bosque",
+        "endereco": "Av. Washington Soares, 85",
+        "loja": "901",
+        "fonte": "https://www.iguatemibosque.com.br/",
+        "quantidade": 128,
+        "valor": 78337.20000000001,
+        "produtos_disponiveis": 20
+      }
+    }
+  ]
+}
