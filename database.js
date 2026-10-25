@@ -13,4 +13,14 @@ const db = new sqlite3.Database(
   }
 );
 
+// Ativa a integridade dos vínculos antes das consultas da aplicação.
+db.serialize(() => {
+  db.run('PRAGMA foreign_keys = ON', (erro) => {
+    if (erro) {
+      console.error('Erro ao ativar as chaves estrangeiras:', erro.message);
+      process.exitCode = 1;
+    }
+  });
+});
+
 module.exports = db;
