@@ -18,7 +18,9 @@ alteração após reiniciar com o mesmo arquivo. `npm test` seleciona somente
 - Serviço web Node.js, plano **Free**.
 - Repositório: https://github.com/rubens1976/estoque, branch `main`.
 - Diretório raiz: vazio (raiz do repositório).
-- Build: `npm ci`.
+- Build no Render (Linux): `npm_config_build_from_source=true npm ci`.
+  Compila o SQLite no servidor para evitar incompatibilidade de GLIBC do
+  binário pré-compilado. Na instalação local Windows, continua sendo `npm ci`.
 - Inicialização: `npm run start:demo`.
 - Node.js: `24.13.1`, definido em `render.yaml`.
 - Verificação de saúde: `/produtos`.
