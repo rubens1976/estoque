@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import PaginaFornecedores from './Fornecedores.jsx';
+import PaginaUnidades from './Unidades.jsx';
+import PaginaAssociacoes from './Associacoes.jsx';
 
 const API = '/api';
 const produtoVazio = {
@@ -52,6 +55,9 @@ function Marca() {
 function Icone({ nome, tamanho = 20 }) {
   const caminhos = {
     caixa: <><path d="M3 7 12 3l9 4v10l-9 4-9-4V7Z" /><path d="m3 7 9 4 9-4M12 11v10" /></>,
+    fornecedores: <><path d="M3 20V6l9-3 9 3v14H3Z" /><path d="M8 9h2M14 9h2M8 13h2M14 13h2M10 20v-4h4v4" /></>,
+    unidades: <><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2M14 10h2M9 14h2M14 14h2M11 21v-4h2v4" /></>,
+    associacoes: <><path d="M9 8h6M9 16h6" /><circle cx="5" cy="8" r="2" /><circle cx="19" cy="16" r="2" /><path d="M7 8h2M15 16h2M12 8v8" /></>,
     busca: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></>,
     mais: <path d="M12 4v16M4 12h16" />,
     editar: <><path d="M4 20h4l12-12-4-4L4 16v4Z" /><path d="m14 6 4 4" /></>,
@@ -79,6 +85,12 @@ function Campo({ rotulo, nome, valor, aoAlterar, ...atributos }) {
 }
 
 export default function App() {
+  const [paginaAtiva, setPaginaAtiva] = useState('produtos');
+
+  useEffect(() => {
+    const titulos = { produtos: 'Produtos', fornecedores: 'Fornecedores', associacoes: 'Associações', unidades: 'Unidades' };
+    document.title = `${titulos[paginaAtiva]} | ConectaByte Informática`;
+  }, [paginaAtiva]);
   const [produtos, setProdutos] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [pesquisa, setPesquisa] = useState('');
@@ -110,10 +122,11 @@ export default function App() {
   }
 
   useEffect(() => {
+    if (paginaAtiva !== 'produtos') return;
     const controlador = new AbortController();
     carregarProdutos(controlador.signal);
     return () => controlador.abort();
-  }, []);
+  }, [paginaAtiva]);
 
   const produtosFiltrados = useMemo(() => {
     const termo = pesquisa.trim().toLocaleLowerCase('pt-BR');
@@ -220,14 +233,31 @@ export default function App() {
         <div className="barra-separador" />
         <p className="menu-legenda">PAINEL DE CONTROLE</p>
         <nav aria-label="Navegação principal">
-          <span className="menu-item ativo"><Icone nome="caixa" /> Produtos</span>
-          <span className="menu-item indisponivel">Fornecedores <small>Em breve</small></span>
-          <span className="menu-item indisponivel">Associações <small>Em breve</small></span>
+          <button type="button" className={`menu-item ${paginaAtiva === 'produtos' ? 'ativo' : ''}`}
+            onClick={() => setPaginaAtiva('produtos')} aria-current={paginaAtiva === 'produtos' ? 'page' : undefined}>
+            <Icone nome="caixa" /> Produtos
+          </button>
+          <button type="button" className={`menu-item ${paginaAtiva === 'fornecedores' ? 'ativo' : ''}`}
+            onClick={() => setPaginaAtiva('fornecedores')} aria-current={paginaAtiva === 'fornecedores' ? 'page' : undefined}>
+            <Icone nome="fornecedores" /> Fornecedores
+          </button>
+          <button type="button" className={`menu-item ${paginaAtiva === 'associacoes' ? 'ativo' : ''}`}
+            onClick={() => setPaginaAtiva('associacoes')} aria-current={paginaAtiva === 'associacoes' ? 'page' : undefined}>
+            <Icone nome="associacoes" /> Associações
+          </button>
+          <button type="button" className={`menu-item ${paginaAtiva === 'unidades' ? 'ativo' : ''}`}
+            onClick={() => setPaginaAtiva('unidades')} aria-current={paginaAtiva === 'unidades' ? 'page' : undefined}>
+            <Icone nome="unidades" /> Unidades
+          </button>
         </nav>
         <div className="barra-rodape">Tecnologia para o seu dia a dia.</div>
       </aside>
 
-      <main className="conteudo">
+      {paginaAtiva === 'fornecedores' && <PaginaFornecedores solicitar={solicitar} Icone={Icone} Campo={Campo} numero={numero} />}
+      {paginaAtiva === 'associacoes' && <PaginaAssociacoes solicitar={solicitar} Icone={Icone} numero={numero} />}
+      {paginaAtiva === 'unidades' && <PaginaUnidades solicitar={solicitar} Icone={Icone} moeda={moeda} numero={numero} />}
+
+      {paginaAtiva === 'produtos' && <main className="conteudo">
         <header className="topo">
           <div className="caminho">Painel <span>/</span> Produtos</div>
           <span className="topo-selo">ConectaByte Informática</span>
@@ -303,9 +333,9 @@ export default function App() {
             <div className="painel-rodape">Exibindo {produtosFiltrados.length} de {produtos.length} produtos</div>
           </section>
         </div>
-      </main>
+      </main>}
 
-      {formularioAberto && (
+      {paginaAtiva === 'produtos' && formularioAberto && (
         <div className="modal-fundo" role="presentation">
           <section className="modal" role="dialog" aria-modal="true" aria-labelledby="form-titulo">
             <div className="modal-topo">
@@ -319,8 +349,9 @@ export default function App() {
                 <Campo rotulo="Código de barras *" nome="codigo_barras" valor={formulario.codigo_barras} aoAlterar={alterarCampo} required maxLength={80} placeholder="Ex.: 7891234567890" />
                 <div className="campos-lado-a-lado">
                   <Campo rotulo="Preço (R$) *" nome="preco" valor={formulario.preco} aoAlterar={alterarCampo} required inputMode="decimal" placeholder="0,00" />
-                  <Campo rotulo="Quantidade *" nome="quantidade" valor={formulario.quantidade} aoAlterar={alterarCampo} required inputMode="numeric" placeholder="0" />
+                  <Campo rotulo={produtoEditado ? 'Quantidade total' : 'Estoque inicial na sede *'} nome="quantidade" valor={formulario.quantidade} aoAlterar={alterarCampo} disabled={!!produtoEditado} required inputMode="numeric" placeholder="0" />
                 </div>
+                {produtoEditado && <p>Para alterar saldos, registre uma movimentação em Unidades.</p>}
                 {erroFormulario && <div className="aviso erro" role="alert">{erroFormulario}</div>}
               </div>
               <div className="modal-acoes">
@@ -332,7 +363,7 @@ export default function App() {
         </div>
       )}
 
-      {produtoExcluido && (
+      {paginaAtiva === 'produtos' && produtoExcluido && (
         <div className="modal-fundo" role="presentation">
           <section className="modal modal-pequeno" role="dialog" aria-modal="true" aria-labelledby="excluir-titulo">
             <div className="modal-topo">

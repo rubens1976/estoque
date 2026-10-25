@@ -1,0 +1,101 @@
+[
+  {
+    "cidade": "Fortaleza",
+    "uf": "CE",
+    "tipo": "Sede",
+    "shopping": "Iguatemi Bosque",
+    "endereco": "Av. Washington Soares, 85",
+    "loja": "901",
+    "fonte": "https://www.iguatemibosque.com.br/",
+    "id": 1,
+    "peso": 24
+  },
+  {
+    "cidade": "São Luís",
+    "uf": "MA",
+    "tipo": "Filial",
+    "shopping": "Shopping da Ilha",
+    "endereco": "Av. Daniel de La Touche, 987, Cohama",
+    "loja": "902",
+    "fonte": "https://www.shoppingdailha.com.br/o-shopping",
+    "id": 2,
+    "peso": 8
+  },
+  {
+    "cidade": "Teresina",
+    "uf": "PI",
+    "tipo": "Filial",
+    "shopping": "Shopping Rio Poty",
+    "endereco": "Av. Marechal Castelo Branco, 911, Porenquanto",
+    "loja": "903",
+    "fonte": "https://www.shoppingriopoty.com.br/o-shopping",
+    "id": 3,
+    "peso": 8
+  },
+  {
+    "cidade": "Natal",
+    "uf": "RN",
+    "tipo": "Filial",
+    "shopping": "Midway Mall",
+    "endereco": "Av. Nevaldo Rocha, 3775, Tirol",
+    "loja": "904",
+    "fonte": "https://www.midwaymall.com.br/fale-conosco",
+    "id": 4,
+    "peso": 8
+  },
+  {
+    "cidade": "João Pessoa",
+    "uf": "PB",
+    "tipo": "Filial",
+    "shopping": "Manaíra Shopping",
+    "endereco": "Av. Gov. Flávio Ribeiro Coutinho, 805, Manaíra",
+    "loja": "905",
+    "fonte": "https://manairashopping.com/contatos/",
+    "id": 5,
+    "peso": 8
+  },
+  {
+    "cidade": "Recife",
+    "uf": "PE",
+    "tipo": "Filial",
+    "shopping": "Shopping Recife",
+    "endereco": "Rua Padre Carapuceiro, 777, Boa Viagem",
+    "loja": "906",
+    "fonte": "https://www.shoppingrecife.com.br/",
+    "id": 6,
+    "peso": 14
+  },
+  {
+    "cidade": "Maceió",
+    "uf": "AL",
+    "tipo": "Filial",
+    "shopping": "Parque Shopping Maceió",
+    "endereco": "Av. Comendador Gustavo Paiva, 5945, Cruz das Almas",
+    "loja": "907",
+    "fonte": "https://www.maceioparqueshopping.com.br/",
+    "id": 7,
+    "peso": 8
+  },
+  {
+    "cidade": "Aracaju",
+    "uf": "SE",
+    "tipo": "Filial",
+    "shopping": "Shopping Jardins",
+    "endereco": "Av. Ministro Geraldo Barreto Sobral, 215, Jardins",
+    "loja": "908",
+    "fonte": "https://shoppingjardins.com.br/localizacao",
+    "id": 8,
+    "peso": 8
+  },
+  {
+    "cidade": "Salvador",
+    "uf": "BA",
+    "tipo": "Filial",
+    "shopping": "Salvador Shopping",
+    "endereco": "Av. Tancredo Neves, 3133",
+    "loja": "909",
+    "fonte": "https://salvadorshopping.com.br/localizacao",
+    "id": 9,
+    "peso": 14
+  }
+]

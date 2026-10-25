@@ -10,6 +10,17 @@ Autor: Rubens Melo
 
 Projeto para cadastro de produtos, fornecedores e associação entre eles.
 
+## Unidades da empresa
+
+No cenário do projeto, a sede da ConectaByte Informática fica em Fortaleza
+e as oito filiais planejadas ficam nas demais capitais nordestinas. Veja os
+[shoppings, endereços verificados e números de loja fictícios](docs/unidades-conectabyte.md).
+Essas unidades da empresa são distintas dos fornecedores cadastrados na API.
+Elas também aparecem na opção **Unidades** do frontend, identificadas como
+parte do cenário acadêmico.
+Essa tela também permite consultar saldos por loja e registrar entradas,
+saídas e transferências com histórico. Veja [estoque por unidade](docs/estoque-por-unidade.md).
+
 ## Como executar
 
 Instale o Node.js, abra um terminal na pasta do projeto e execute:
@@ -20,7 +31,10 @@ node criar-tabelas.js
 node app.js
 ```
 
-`criar-tabelas.js` cria apenas as tabelas que ainda não existem. O banco
+`criar-tabelas.js` cria as tabelas, cadastra as nove unidades e prepara o estoque
+por loja. Para atualizar um banco antigo com cópia de segurança automática,
+execute `npm.cmd run migrar:unidades` antes de iniciar a API. A migração pode ser
+repetida sem redistribuir os saldos existentes. O banco
 `estoque.db` permanece na pasta do projeto; guarde uma cópia dele antes de
 qualquer limpeza manual. A API fica em `http://localhost:3000/`.
 Para parar o servidor, pressione `Ctrl + C` no terminal. Depois de alterar
@@ -28,9 +42,10 @@ Para parar o servidor, pressione `Ctrl + C` no terminal. Depois de alterar
 
 ## Rotas da API
 
-As rotas ficam em três controladores: `controllers/produtos.js` cuida do
+As rotas ficam em quatro controladores: `controllers/produtos.js` cuida do
 cadastro de produtos, `controllers/fornecedores.js` cuida dos fornecedores e
-`controllers/associacoes.js` cuida dos vínculos entre ambos. `app.js` prepara
+`controllers/associacoes.js` cuida dos vínculos e `controllers/estoque.js`
+cuida das unidades e movimentações. `app.js` prepara
 o servidor e registra esses controladores.
 
 | Método | Endereço | Função |
@@ -49,6 +64,10 @@ o servidor e registra esses controladores.
 | GET | `/produtos/:id/fornecedores` | Listar fornecedores do produto |
 | GET | `/fornecedores/:id/produtos` | Listar produtos do fornecedor |
 | DELETE | `/produtos/:id/fornecedores/:fornecedorId` | Remover vínculo |
+| GET | `/unidades` | Resumo dos saldos das nove unidades |
+| GET | `/unidades/:id/estoque` | Produtos e saldos de uma unidade |
+| GET | `/estoque/movimentacoes` | Últimos 100 registros de estoque |
+| POST | `/estoque/movimentacoes` | Registrar entrada, saída ou transferência |
 
 Substitua `:id` e `:fornecedorId` pelos números retornados ao cadastrar os
 registros. Consultas GET e exclusões DELETE não precisam de JSON no corpo.
@@ -75,19 +94,53 @@ Envie `POST /produtos` com JSON como este:
 `preco` é um número maior ou igual a zero. `quantidade` é um inteiro maior
 ou igual a zero e assume zero quando omitida. `descricao` é opcional no
 cadastro e assume texto vazio. Em `PUT /produtos/:id`, envie os cinco campos.
+Após preparar o estoque por unidade, o saldo inicial de um produto novo entra
+na sede. Em edições, mantenha a quantidade total atual; alterações de saldo
+são feitas por movimentações. Alterar o total diretamente retorna `409`.
+
+## Produtos do CSV de demonstração
+
+O arquivo `estoque_loja_informatica.csv`, preparado para este projeto, contém
+19 produtos. Para conferir quantos ainda faltam no banco, execute
+`npm.cmd run importar:produtos`. Para importar, execute
+`npm.cmd run importar:produtos -- --aplicar`. O importador faz uma cópia de
+segurança de `estoque.db` em `backups/` antes de gravar; essa pasta fica fora
+do Git. Produtos já cadastrados com o mesmo nome são preservados, sem
+sobrescrever preço ou quantidade.
+
+O CSV não traz `codigo_barras`, obrigatório no cadastro. Por isso, a carga usa
+identificadores internos estáveis com prefixo `DEMO-CB-` nesse campo. **Eles
+são fictícios e não são códigos de barras reais.** Preços, descrições e
+quantidades vêm do CSV; não representam uma verificação de preços atuais,
+disponibilidade ou especificações dos fabricantes.
+
+Após a importação, a revisão dos 19 preços e descrições pode ser conferida com
+`npm.cmd run revisar:catalogo` e aplicada com
+`npm.cmd run revisar:catalogo -- --aplicar`. Essa operação faz backup do banco,
+atualiza só preço e descrição e preserva quantidades e vínculos. A metodologia
+e as referências estão em [revisao-catalogo-e-distribuicao.md](docs/revisao-catalogo-e-distribuicao.md).
+O CSV original está preservado localmente em `backups/`.
+
+Para gerar o plano inicial de quantidades para a sede e as oito filiais,
+execute `npm.cmd run planejar:distribuicao`. O relatório resultante fica em
+[distribuicao-inicial.csv](docs/distribuicao-inicial.csv). O rateio soma o total
+de cada produto. O arquivo é uma referência de planejamento: os saldos
+operacionais passam a ser consultados na tela **Unidades** ou na API.
 
 ## Coleção do Insomnia
 
 O arquivo [conectabyte-insomnia](conectabyte-insomnia) é a coleção exportada
-no formato Insomnia v5, com as 14 requisições acima. Importe-o pelo menu de coleção
+no formato Insomnia v5, com as 14 requisições originais de produtos, fornecedores
+e vínculos. As quatro novas rotas de estoque estão documentadas em
+[estoque-por-unidade.md](docs/estoque-por-unidade.md). Importe a coleção pelo menu
 do Insomnia, usando **Import > From File**. O arquivo guarda exemplos com IDs
 usados durante os testes; após cadastrar ou excluir registros, confira os IDs
 atuais antes de reenviar POST, PUT ou DELETE. A coleção não inclui o banco
 `estoque.db` nem as respostas anteriores.
 
-## Página de produtos em React
+## Interface em React
 
-A primeira página do frontend está em `frontend/`. Com o backend iniciado em
+A interface está em `frontend/`. Com o backend iniciado em
 um terminal (`node app.js`), abra outro terminal na pasta do projeto:
 
 ```bat
@@ -96,12 +149,41 @@ npm.cmd run dev --prefix frontend
 ```
 
 Abra o endereço mostrado pelo Vite (normalmente `http://127.0.0.1:5173/`).
-A página lista, busca, cadastra, edita e exclui produtos usando as rotas reais
-da API. O servidor de desenvolvimento encaminha as chamadas `/api` para a
+As páginas listam, buscam, cadastram, editam e excluem produtos e fornecedores
+usando as rotas reais da API. O servidor de desenvolvimento encaminha `/api` para a
 API em `http://localhost:3000`; por isso, ambos devem estar iniciados.
 
 Para conferir se o frontend compila, execute `npm.cmd run build --prefix frontend`.
-As páginas de fornecedores e associações serão adicionadas depois.
+Na opção **Associações**, selecione um produto para ver seus fornecedores,
+vincular outro ou remover apenas o vínculo. A segunda consulta mostra os
+produtos de um fornecedor selecionado. Essas ações usam as rotas da API e
+preservam os cadastros de produtos e fornecedores.
+
+## Fornecedores de exemplo
+
+Para preencher a lista com dados fictícios de demonstração, depois de criar as
+tabelas execute `npm.cmd run exemplo:fornecedores`. A carga acrescenta quatorze
+fornecedores com CNPJ válido, telefone, e-mail e endereço, incluindo um em cada
+estado do Nordeste, e completa os campos
+vazios da `Distribuidora Teste` se ela existir. Executar novamente não cria
+duplicatas nem substitui os dados já preenchidos. Os contatos e endereços são
+fictícios; os e-mails usam `example.com`. Os CNPJs são números de exemplo com
+dígitos verificadores válidos, não dados de empresas reais. O banco local `estoque.db` continua
+fora do Git.
+
+## Vínculos de exemplo
+
+Depois de importar os produtos do CSV e cadastrar os fornecedores de exemplo,
+execute `npm.cmd run exemplo:vinculos` para conferir a prévia. Para gravar,
+execute `npm.cmd run exemplo:vinculos -- --aplicar`. A carga cria dois vínculos
+por produto (40 ao todo), usando nomes de produtos e CNPJs fictícios para
+localizar os registros, sem depender dos IDs do banco. Ela não altera os
+cadastros nem duplica vínculos ao ser executada novamente. Antes de gravar,
+faz uma cópia de `estoque.db` em `backups/`, fora do Git.
+
+Essas associações são **apenas ilustrativas para a avaliação acadêmica**.
+Não foram verificadas relações comerciais entre as marcas dos produtos e os
+fornecedores fictícios.
 
 ## Cadastro de fornecedores
 
@@ -235,3 +317,9 @@ O vínculo pode ser criado novamente usando a rota POST.
 Execute `npm.cmd test` no PowerShell ou `npm test` no Prompt de Comando.
 Os testes usam exclusivamente SQLite em memória e uma porta HTTP temporária;
 não abrem nem alteram `estoque.db`.
+
+## Pendência para a entrega final
+
+- [ ] Preparar um banco SQLite de exemplo, separado de `estoque.db`, com dados
+  fictícios de produtos, fornecedores e vínculos. Conferir que não contenha
+  dados pessoais e decidir se será incluído no GitHub para facilitar a avaliação.

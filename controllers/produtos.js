@@ -218,6 +218,10 @@ module.exports = function registrarProdutos(app, db) {
 
         console.error('Erro ao editar produto:', erro.message);
 
+        if (erro.message.includes('ESTOQUE_POR_UNIDADE')) {
+          return res.status(409).json({ erro: 'Ajuste a quantidade pela movimentação de estoque em Unidades.' });
+        }
+
         return res.status(500).json({
           erro: 'Não foi possível editar o produto.'
         });

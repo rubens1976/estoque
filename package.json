@@ -7,7 +7,13 @@
   "type": "commonjs",
   "main": "app.js",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "exemplo:fornecedores": "node scripts/popular-fornecedores-exemplo.js",
+    "importar:produtos": "node scripts/importar-produtos-csv.js",
+    "exemplo:vinculos": "node scripts/vincular-produtos-fornecedores-exemplo.js",
+    "revisar:catalogo": "node scripts/atualizar-catalogo-exemplo.js",
+    "planejar:distribuicao": "node scripts/planejar-distribuicao-unidades.js",
+    "migrar:unidades": "node scripts/migrar-estoque-unidades.js"
   },
   "dependencies": {
     "express": "^5.3.0",

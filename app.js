@@ -3,6 +3,7 @@ const db = require('./database');
 const registrarProdutos = require('./controllers/produtos');
 const registrarFornecedores = require('./controllers/fornecedores');
 const registrarAssociacoes = require('./controllers/associacoes');
+const registrarEstoque = require('./controllers/estoque');
 
 const app = express();
 const PORT = 3000;
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 registrarProdutos(app, db);
 registrarFornecedores(app, db);
 registrarAssociacoes(app, db);
+registrarEstoque(app, db);
 
 
 // Trata endereços inexistentes.

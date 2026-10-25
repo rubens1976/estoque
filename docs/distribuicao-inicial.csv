@@ -1,0 +1,181 @@
+produto_id,codigo_barras,produto,cidade,uf,tipo,shopping,quantidade
+1,"7891234567890","Teclado USB","Fortaleza",CE,Sede,"Iguatemi Bosque",2
+1,"7891234567890","Teclado USB","São Luís",MA,Filial,"Shopping da Ilha",1
+1,"7891234567890","Teclado USB","Teresina",PI,Filial,"Shopping Rio Poty",1
+1,"7891234567890","Teclado USB","Natal",RN,Filial,"Midway Mall",1
+1,"7891234567890","Teclado USB","João Pessoa",PB,Filial,"Manaíra Shopping",1
+1,"7891234567890","Teclado USB","Recife",PE,Filial,"Shopping Recife",1
+1,"7891234567890","Teclado USB","Maceió",AL,Filial,"Parque Shopping Maceió",1
+1,"7891234567890","Teclado USB","Aracaju",SE,Filial,"Shopping Jardins",1
+1,"7891234567890","Teclado USB","Salvador",BA,Filial,"Salvador Shopping",1
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Fortaleza",CE,Sede,"Iguatemi Bosque",5
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","São Luís",MA,Filial,"Shopping da Ilha",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Teresina",PI,Filial,"Shopping Rio Poty",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Natal",RN,Filial,"Midway Mall",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","João Pessoa",PB,Filial,"Manaíra Shopping",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Recife",PE,Filial,"Shopping Recife",3
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Maceió",AL,Filial,"Parque Shopping Maceió",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Aracaju",SE,Filial,"Shopping Jardins",2
+3,"DEMO-CB-E6B1DB7F956B","SSD NVMe Samsung 990 PRO 1TB","Salvador",BA,Filial,"Salvador Shopping",3
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Fortaleza",CE,Sede,"Iguatemi Bosque",14
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","São Luís",MA,Filial,"Shopping da Ilha",5
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Teresina",PI,Filial,"Shopping Rio Poty",4
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Natal",RN,Filial,"Midway Mall",4
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","João Pessoa",PB,Filial,"Manaíra Shopping",5
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Recife",PE,Filial,"Shopping Recife",8
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Maceió",AL,Filial,"Parque Shopping Maceió",5
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Aracaju",SE,Filial,"Shopping Jardins",5
+4,"DEMO-CB-A4E165570E46","SSD NVMe Kingston NV3 1TB","Salvador",BA,Filial,"Salvador Shopping",8
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Fortaleza",CE,Sede,"Iguatemi Bosque",3
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","São Luís",MA,Filial,"Shopping da Ilha",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Teresina",PI,Filial,"Shopping Rio Poty",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Natal",RN,Filial,"Midway Mall",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","João Pessoa",PB,Filial,"Manaíra Shopping",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Recife",PE,Filial,"Shopping Recife",2
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Maceió",AL,Filial,"Parque Shopping Maceió",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Aracaju",SE,Filial,"Shopping Jardins",1
+5,"DEMO-CB-113C85A19DD7","SSD NVMe WD_BLACK SN850X 1TB","Salvador",BA,Filial,"Salvador Shopping",1
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Fortaleza",CE,Sede,"Iguatemi Bosque",2
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","São Luís",MA,Filial,"Shopping da Ilha",1
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Teresina",PI,Filial,"Shopping Rio Poty",0
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Natal",RN,Filial,"Midway Mall",0
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","João Pessoa",PB,Filial,"Manaíra Shopping",0
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Recife",PE,Filial,"Shopping Recife",1
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Maceió",AL,Filial,"Parque Shopping Maceió",1
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Aracaju",SE,Filial,"Shopping Jardins",1
+6,"DEMO-CB-2E043790E95B","Memoria RAM TEAMGROUP T-Force Delta RGB 16GB (2x8GB) DDR4 3000MHz","Salvador",BA,Filial,"Salvador Shopping",1
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Fortaleza",CE,Sede,"Iguatemi Bosque",8
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","São Luís",MA,Filial,"Shopping da Ilha",3
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Teresina",PI,Filial,"Shopping Rio Poty",3
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Natal",RN,Filial,"Midway Mall",3
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","João Pessoa",PB,Filial,"Manaíra Shopping",2
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Recife",PE,Filial,"Shopping Recife",5
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Maceió",AL,Filial,"Parque Shopping Maceió",2
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Aracaju",SE,Filial,"Shopping Jardins",3
+7,"DEMO-CB-5367021FF00B","Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16","Salvador",BA,Filial,"Salvador Shopping",5
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Fortaleza",CE,Sede,"Iguatemi Bosque",22
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","São Luís",MA,Filial,"Shopping da Ilha",8
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Teresina",PI,Filial,"Shopping Rio Poty",7
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Natal",RN,Filial,"Midway Mall",7
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","João Pessoa",PB,Filial,"Manaíra Shopping",7
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Recife",PE,Filial,"Shopping Recife",13
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Maceió",AL,Filial,"Parque Shopping Maceió",7
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Aracaju",SE,Filial,"Shopping Jardins",7
+8,"DEMO-CB-9F9747398818","Memoria RAM Kingston 8GB DDR4 3200MHz CL22","Salvador",BA,Filial,"Salvador Shopping",13
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Fortaleza",CE,Sede,"Iguatemi Bosque",11
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","São Luís",MA,Filial,"Shopping da Ilha",4
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Teresina",PI,Filial,"Shopping Rio Poty",4
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Natal",RN,Filial,"Midway Mall",4
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","João Pessoa",PB,Filial,"Manaíra Shopping",4
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Recife",PE,Filial,"Shopping Recife",6
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Maceió",AL,Filial,"Parque Shopping Maceió",3
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Aracaju",SE,Filial,"Shopping Jardins",3
+9,"DEMO-CB-628EC61DB7EF","Memoria RAM Dale7 No Limits 8GB DDR4 3200MHz","Salvador",BA,Filial,"Salvador Shopping",6
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Fortaleza",CE,Sede,"Iguatemi Bosque",4
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","São Luís",MA,Filial,"Shopping da Ilha",2
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Teresina",PI,Filial,"Shopping Rio Poty",2
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Natal",RN,Filial,"Midway Mall",1
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","João Pessoa",PB,Filial,"Manaíra Shopping",1
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Recife",PE,Filial,"Shopping Recife",3
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Maceió",AL,Filial,"Parque Shopping Maceió",1
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Aracaju",SE,Filial,"Shopping Jardins",1
+10,"DEMO-CB-6B3FA2413393","Monitor Gamer Samsung Odyssey G30 24 Full HD 144Hz","Salvador",BA,Filial,"Salvador Shopping",3
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Fortaleza",CE,Sede,"Iguatemi Bosque",6
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","São Luís",MA,Filial,"Shopping da Ilha",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Teresina",PI,Filial,"Shopping Rio Poty",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Natal",RN,Filial,"Midway Mall",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","João Pessoa",PB,Filial,"Manaíra Shopping",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Recife",PE,Filial,"Shopping Recife",4
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Maceió",AL,Filial,"Parque Shopping Maceió",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Aracaju",SE,Filial,"Shopping Jardins",2
+11,"DEMO-CB-E3E69AC68149","Monitor HQ 24HQ-GAMER 24 Full HD 75Hz","Salvador",BA,Filial,"Salvador Shopping",4
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Fortaleza",CE,Sede,"Iguatemi Bosque",1
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","São Luís",MA,Filial,"Shopping da Ilha",0
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Teresina",PI,Filial,"Shopping Rio Poty",0
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Natal",RN,Filial,"Midway Mall",1
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","João Pessoa",PB,Filial,"Manaíra Shopping",1
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Recife",PE,Filial,"Shopping Recife",1
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Maceió",AL,Filial,"Parque Shopping Maceió",0
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Aracaju",SE,Filial,"Shopping Jardins",0
+12,"DEMO-CB-7123874A8A4E","Processador AMD Ryzen 5 5600G 3.9GHz (turbo 4.4GHz) AM4","Salvador",BA,Filial,"Salvador Shopping",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Fortaleza",CE,Sede,"Iguatemi Bosque",3
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","São Luís",MA,Filial,"Shopping da Ilha",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Teresina",PI,Filial,"Shopping Rio Poty",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Natal",RN,Filial,"Midway Mall",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","João Pessoa",PB,Filial,"Manaíra Shopping",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Recife",PE,Filial,"Shopping Recife",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Maceió",AL,Filial,"Parque Shopping Maceió",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Aracaju",SE,Filial,"Shopping Jardins",1
+13,"DEMO-CB-A6AEE566DEE8","Processador Intel Core i5-12400 4.4GHz 18MB Cache LGA 1700","Salvador",BA,Filial,"Salvador Shopping",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Fortaleza",CE,Sede,"Iguatemi Bosque",2
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","São Luís",MA,Filial,"Shopping da Ilha",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Teresina",PI,Filial,"Shopping Rio Poty",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Natal",RN,Filial,"Midway Mall",0
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","João Pessoa",PB,Filial,"Manaíra Shopping",0
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Recife",PE,Filial,"Shopping Recife",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Maceió",AL,Filial,"Parque Shopping Maceió",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Aracaju",SE,Filial,"Shopping Jardins",1
+14,"DEMO-CB-50735DFE4856","Processador Intel Core i5-12600KF 4.9GHz 20MB Cache LGA 1700","Salvador",BA,Filial,"Salvador Shopping",1
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Fortaleza",CE,Sede,"Iguatemi Bosque",7
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","São Luís",MA,Filial,"Shopping da Ilha",3
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Teresina",PI,Filial,"Shopping Rio Poty",2
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Natal",RN,Filial,"Midway Mall",2
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","João Pessoa",PB,Filial,"Manaíra Shopping",2
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Recife",PE,Filial,"Shopping Recife",4
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Maceió",AL,Filial,"Parque Shopping Maceió",3
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Aracaju",SE,Filial,"Shopping Jardins",3
+15,"DEMO-CB-1CE9808579A2","Processador Intel Core i5-10400F 4.3GHz 12MB Cache LGA 1200","Salvador",BA,Filial,"Salvador Shopping",4
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Fortaleza",CE,Sede,"Iguatemi Bosque",1
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","São Luís",MA,Filial,"Shopping da Ilha",0
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Teresina",PI,Filial,"Shopping Rio Poty",0
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Natal",RN,Filial,"Midway Mall",0
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","João Pessoa",PB,Filial,"Manaíra Shopping",0
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Recife",PE,Filial,"Shopping Recife",1
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Maceió",AL,Filial,"Parque Shopping Maceió",0
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Aracaju",SE,Filial,"Shopping Jardins",1
+16,"DEMO-CB-A4FCFA656185","Placa de Video Galax GeForce RTX 4060 Ti Dual 1-Click OC 8GB GDDR6","Salvador",BA,Filial,"Salvador Shopping",1
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Fortaleza",CE,Sede,"Iguatemi Bosque",10
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","São Luís",MA,Filial,"Shopping da Ilha",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Teresina",PI,Filial,"Shopping Rio Poty",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Natal",RN,Filial,"Midway Mall",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","João Pessoa",PB,Filial,"Manaíra Shopping",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Recife",PE,Filial,"Shopping Recife",6
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Maceió",AL,Filial,"Parque Shopping Maceió",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Aracaju",SE,Filial,"Shopping Jardins",3
+17,"DEMO-CB-C4AE2929E19A","Kit Teclado e Mouse Sem Fio Logitech MK295","Salvador",BA,Filial,"Salvador Shopping",6
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Fortaleza",CE,Sede,"Iguatemi Bosque",4
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","São Luís",MA,Filial,"Shopping da Ilha",2
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Teresina",PI,Filial,"Shopping Rio Poty",1
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Natal",RN,Filial,"Midway Mall",1
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","João Pessoa",PB,Filial,"Manaíra Shopping",1
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Recife",PE,Filial,"Shopping Recife",2
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Maceió",AL,Filial,"Parque Shopping Maceió",1
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Aracaju",SE,Filial,"Shopping Jardins",1
+18,"DEMO-CB-DF0C87BC83C6","Kit Teclado e Mouse Sem Fio Multilaser TC202","Salvador",BA,Filial,"Salvador Shopping",2
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Fortaleza",CE,Sede,"Iguatemi Bosque",2
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","São Luís",MA,Filial,"Shopping da Ilha",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Teresina",PI,Filial,"Shopping Rio Poty",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Natal",RN,Filial,"Midway Mall",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","João Pessoa",PB,Filial,"Manaíra Shopping",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Recife",PE,Filial,"Shopping Recife",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Maceió",AL,Filial,"Parque Shopping Maceió",1
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Aracaju",SE,Filial,"Shopping Jardins",0
+19,"DEMO-CB-6A9D1327F973","Kit Teclado e Mouse Sem Fio Dell Pro KM5221W","Salvador",BA,Filial,"Salvador Shopping",1
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Fortaleza",CE,Sede,"Iguatemi Bosque",16
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","São Luís",MA,Filial,"Shopping da Ilha",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Teresina",PI,Filial,"Shopping Rio Poty",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Natal",RN,Filial,"Midway Mall",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","João Pessoa",PB,Filial,"Manaíra Shopping",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Recife",PE,Filial,"Shopping Recife",9
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Maceió",AL,Filial,"Parque Shopping Maceió",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Aracaju",SE,Filial,"Shopping Jardins",5
+20,"DEMO-CB-AF7F13F35C87","Kit Teclado e Mouse Sem Fio Exbom BK-1000","Salvador",BA,Filial,"Salvador Shopping",9
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Fortaleza",CE,Sede,"Iguatemi Bosque",5
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","São Luís",MA,Filial,"Shopping da Ilha",2
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Teresina",PI,Filial,"Shopping Rio Poty",1
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Natal",RN,Filial,"Midway Mall",2
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","João Pessoa",PB,Filial,"Manaíra Shopping",2
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Recife",PE,Filial,"Shopping Recife",3
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Maceió",AL,Filial,"Parque Shopping Maceió",2
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Aracaju",SE,Filial,"Shopping Jardins",2
+21,"DEMO-CB-E9EDF48CF0ED","Kit Gamer Teclado e Mouse com Fio Exbom BK-G3000","Salvador",BA,Filial,"Salvador Shopping",3
