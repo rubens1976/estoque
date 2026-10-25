@@ -6,7 +6,7 @@ const registrarAssociacoes = require('./controllers/associacoes');
 const registrarEstoque = require('./controllers/estoque');
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
 
 app.disable('x-powered-by');
 app.use(express.json({ limit: '100kb' }));

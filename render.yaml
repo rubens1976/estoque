@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: conectabyte-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm run start:demo
+    healthCheckPath: /produtos
+    envVars:
+      - key: NODE_VERSION
+        value: 24.13.1
+      - key: NODE_ENV
+        value: production

@@ -2,6 +2,15 @@
 
 Data: 25/10/2026. Versão analisada: `c323b67`.
 
+**Complemento de 25/10/2026, após acesso ao enunciado da plataforma:** a Etapa 1
+pede o link do GitHub. A Etapa 2 exige serviços REST executando na nuvem e um
+documento com três chamadas funcionais para avaliação pelo Insomnia. O campo
+de envio aceita PDF de até 5 MB. Essas exigências não constavam do material
+de apoio usado na auditoria original abaixo e prevalecem sobre suas conclusões
+sobre hospedagem e formato de entrega. Consulte o
+[roteiro de publicação](publicacao-api.md). O enunciado específico da Etapa 3
+ainda precisa ser conferido.
+
 Atualização posterior à auditoria: a preparação dos dados e a coleção foram
 corrigidas na cópia de trabalho. Os [resultados da execução no Insomnia](resultados-testes-insomnia.md)
 documentam a importação no aplicativo, as operações verificadas, as limitações
@@ -178,10 +187,10 @@ máquina.
   exigidos pelo material.
 - Nest.js e Next.js são opcionais. As extensões de VS Code são dicas.
   CI/CD é apresentado como assunto futuro. Não foram exigidos login,
-  pagamentos, scraping, hospedagem pública da aplicação ou imagens de produtos.
-- O texto não informa se a entrega é apenas um link do GitHub, um ZIP, um vídeo
-  ou outro formato. Esse ponto deve ser conferido no enunciado de avaliação ou
-  no ambiente da disciplina antes da submissão.
+  pagamentos, scraping ou imagens de produtos. A hospedagem pública da API foi
+  confirmada posteriormente pelo enunciado da Etapa 2 e é necessária.
+- O texto de apoio não informava o formato de entrega. A plataforma confirmou
+  posteriormente GitHub na Etapa 1 e PDF com três chamadas públicas na Etapa 2.
 
 ## Próxima ação sugerida
 

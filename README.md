@@ -23,6 +23,11 @@ saídas e transferências com histórico. Veja [estoque por unidade](docs/estoqu
 
 ## Como executar
 
+Para disponibilizar a API ao professor pela internet, consulte o
+[roteiro de publicação no Render](docs/publicacao-api.md). A configuração
+`render.yaml` usa o plano gratuito e dados de demonstração. A publicação e os
+testes externos ainda precisam ser concluídos na conta de hospedagem.
+
 Para iniciar também a interface React, siga o
 [guia completo do frontend](frontend/README.md), com os dois terminais,
 preparação dos dados de exemplo, telas disponíveis e solução de problemas.

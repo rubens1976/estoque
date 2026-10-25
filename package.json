@@ -7,7 +7,9 @@
   "type": "commonjs",
   "main": "app.js",
   "scripts": {
-    "test": "node --test",
+    "start": "node app.js",
+    "start:demo": "node scripts/iniciar-demonstracao.js",
+    "test": "node --test \"tests/*.test.js\"",
     "exemplo:fornecedores": "node scripts/popular-fornecedores-exemplo.js",
     "importar:produtos": "node scripts/importar-produtos-csv.js",
     "exemplo:vinculos": "node scripts/vincular-produtos-fornecedores-exemplo.js",
